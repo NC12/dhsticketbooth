@@ -1,0 +1,30 @@
+application: dhsticketbooth
+version: 3
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /static
+  static_dir: static
+  login: required
+
+- url: /favicon\.png
+  static_files: favicon.png
+  upload: favicon\.png
+
+- url: .*
+  script: main.app
+  login: required
+  
+- url: /order\.html
+  script: main.app
+  login: required
+  secure: always
+ 
+libraries:
+- name: webapp2
+  version: "2.5.2"
+
+- name: jinja2
+  version: latest

@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+  <head>
+    <meta name="description" content="My Current Orders"/>
+    <meta charset="UTF-8"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	<link rel="icon" type="image/png" href="favicon.png"/>	
+	<title>My Orders - DHS Tickets</title> 
+	<!-- css files -->
+	<link rel="stylesheet" href="/static/themes/dunman.css" />
+	<link rel="stylesheet" href="/static/css/jquery.mobile.structure-1.3.0.css"/>
+	<link rel="stylesheet" href="/static/css/normalize.css"/>	
+    <link rel="stylesheet" href="/static/css/main.css"/> 
+  </head>
+
+  <body>
+  <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="inline" data-theme="b">
+			<h3>
+				My Orders
+			</h3>
+			<a data-role="button" href="/" data-icon="home" data-iconpos="left" class="ui-btn-left" data-theme="a">Home</a>
+		</div>
+		{% if orders %}
+			{% for order in orders %}
+				Number of tickets:
+				<b>{{ order.ticketNum|escape }}</b>
+			{% endfor %}
+			{% else %}
+				You have no orders
+		{% endif %}
+
+
+	</div>
+	
+	<!-- javascript files -->
+	<script src="/static/js/jquery.mobile-1.3.0.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/vendor/jquery-1.9.0.min.js"></script>	
+	<script type="text/javascript" src="static/js/plugins.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+	<script type="text/javascript" src="static/js/vendor/modernizr-2.6.2.min.js"></script>	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-XXXXX-X']);
+		_gaq.push(['_setDomainName', 'dhsticketbooth.appspot.com']); <!-- UA-XXXXX-X represents site's ID. -->
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+  </body>
+</html>
