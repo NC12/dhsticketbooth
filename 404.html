@@ -1,25 +1,60 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
   <head>
-    <meta charset="UTF-8" />
-      <title>Oops</title>
-      <link rel="stylesheet" href="/static/css/main.css" />
-  </head>
-  <body>
-    <header> 
-      <h1>404: Page not found :(</h1>
-    </header>
+	<meta name="description" content="Dunman High School Tickets Homepage"/>
+    <meta charset="UTF-8"/> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	<link rel="icon" type="image/png" href="favicon.png"/>	
+	<title>Error - DHS Tickets</title> 
+	<!-- css files -->
+	<link rel="stylesheet" href="/static/themes/dunman.css" />
+	<link rel="stylesheet" href="/static/css/jquery.mobile.structure-1.3.0.css"/>
+	<link rel="stylesheet" href="/static/css/normalize.css"/>	
+    <link rel="stylesheet" href="/static/css/main.css"/>
 	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-XXXXX-X']);
-		_gaq.push(['_setDomainName', 'dhsticketbooth.appspot.com']); <!-- UA-XXXXX-X represents site's ID. -->
-		_gaq.push(['_trackPageview']);
-		(function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-XXXXX-X']); <!-- UA-XXXXX-X represents site's ID. -->
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
 	</script>
+  </head>
+
+  <body>
+  <!--[if lt IE 7]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+  <![endif]-->
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="inline">
+			<a data-role="button" href="{{ url }}" class="ui-btn-right">{{ url_linktext }}</a>
+			<a data-role="button" href="/" data-icon="home" data-iconpos="left" class="ui-btn-left">Home</a>
+		</div>
+		<div data-role="collapsible" data-collapsed="false">
+		   <h3>Error!</h3>
+		   <p>DHS Tickets</p> 
+		   <p>Please sign-in with an authorised DHSmail account.</p>
+		</div>	
+	</div>
+	
+	<!-- javascript files -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="/static/js/jquery.mobile-1.3.0.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script type="text/javascript" src="static/js/vendor/jquery-1.9.0.min.js"></script>	
+	<script type="text/javascript" src="static/js/plugins.js"></script>
+	<script type="text/javascript" src="static/js/main.js"></script>
+	<script type="text/javascript" src="static/js/vendor/modernizr-2.6.2.min.js"></script>	
   </body>
-  </body>
+  
 </html>

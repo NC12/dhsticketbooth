@@ -26,13 +26,13 @@
 	position: absolute;
 
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 100px) {
 	.ui-bar-a {
 		background: black url('../images/dhstickets1.png') no-repeat;
 		background-size: 100% 100%;
 	}
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
 	.ui-bar-a {
 		background: black url('../images/phonebanner.png') no-repeat;
 		background-size: 100% 100%;
